@@ -8,10 +8,11 @@ namespace SandBox
     {
         static void Main(string[] args)
         {
-            /// 1- Write a program and ask the user to enter a few numbers separated by a hyphen. 
-            ///Work out if the numbers are consecutive.For example, if the input is "5-6-7-8-9" or "20-19-18-17-16", 
-            ///display a message: "Consecutive"; otherwise, display "Not Consecutive".
-            ///
+            /*
+            1- Write a program and ask the user to enter a few numbers separated by a hyphen. 
+            Work out if the numbers are consecutive.For example, if the input is "5-6-7-8-9" or "20-19-18-17-16", 
+            display a message: "Consecutive"; otherwise, display "Not Consecutive".
+            */
 
             //Ask for input
             Console.WriteLine("Please, add numbers. For example: 1-2-3-4");
@@ -37,11 +38,12 @@ namespace SandBox
             var message = isConsecutive ? "Consecutive" : "Not Consecutive";
             Console.WriteLine(message);
 
+            /*
+            2- Write a program and ask the user to enter a few numbers separated by a hyphen. 
+            If the user simply presses Enter, without supplying an input, exit immediately; otherwise, 
+            check to see if there are duplicates. If so, display "Duplicate" on the console.
+            */
 
-            ///2- Write a program and ask the user to enter a few numbers separated by a hyphen. 
-            ///If the user simply presses Enter, without supplying an input, exit immediately; otherwise, 
-            ///check to see if there are duplicates. If so, display "Duplicate" on the console.
-            ///
             Console.WriteLine("Please, add numbers. For example: 1-2-3-4");
             var input2 = Console.ReadLine();
 
@@ -67,11 +69,13 @@ namespace SandBox
             if (includesDuplicates)
                 Console.WriteLine("Duplicate");
 
-            ///3- Write a program and ask the user to enter a time value in the 24-hour time format (e.g. 19:00). 
-            ///A valid time should be between 00:00 and 23:59.If the time is valid, display "Ok"; otherwise, 
-            ///display "Invalid Time".
-            ///If the user doesn't provide any values, consider it as invalid time.
-            ///
+            /*
+            3- Write a program and ask the user to enter a time value in the 24-hour time format (e.g. 19:00). 
+            A valid time should be between 00:00 and 23:59.If the time is valid, display "Ok"; otherwise, 
+            display "Invalid Time".
+            If the user doesn't provide any values, consider it as invalid time.
+            */
+
             Console.Write("Enter time: ");
             var input3 = Console.ReadLine();
 
@@ -103,12 +107,14 @@ namespace SandBox
                 Console.WriteLine("Invalid Time");
             }
 
-            ///4- Write a program and ask the user to enter a few words separated by a space.
-            ///Use the words to create a variable name with PascalCase.
-            ///For example, if the user types: "number of students", display "NumberOfStudents".
-            ///Make sure that the program is not dependent on the input. So, if the user types "NUMBER OF STUDENTS", 
-            ///the program should still display "NumberOfStudents".
-            ///
+            /*
+            4- Write a program and ask the user to enter a few words separated by a space.
+            Use the words to create a variable name with PascalCase.
+            For example, if the user types: "number of students", display "NumberOfStudents".
+            Make sure that the program is not dependent on the input. So, if the user types "NUMBER OF STUDENTS", 
+            the program should still display "NumberOfStudents".
+            */
+
             Console.Write("Please, enter a few words separated by space: ");
             var input4 = Console.ReadLine();
             if (String.IsNullOrWhiteSpace(input4))
@@ -126,10 +132,11 @@ namespace SandBox
 
             Console.WriteLine(variableName);
 
-            ///5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) 
-            ///in the word. 
-            ///So, if the user enters "inadequate", the program should display 6 on the console.
-            ///
+            /*
+            5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) 
+            in the word. 
+            So, if the user enters "inadequate", the program should display 6 on the console.
+            */
 
             bool isVowel(char ch)
             {
@@ -153,10 +160,7 @@ namespace SandBox
                 }
 
             }
-
-
-
-            //Solution &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+           
             Console.Write("Enter a word: ");
             // Note the ToLower() here. This is used to count for both A and a. 
             var input6 = Console.ReadLine().ToLower();
@@ -170,8 +174,6 @@ namespace SandBox
             }
 
             Console.WriteLine(vowelsCount);
-
-
 
         }
     }
